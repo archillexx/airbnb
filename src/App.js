@@ -1,6 +1,8 @@
 import Navbar from './components/navbar';
 import Hero from './components/hero';
+import MidSection from './components/midsection';
 import "@fontsource/roboto";
+import "@fontsource/roboto-condensed";
 
 
 function App() {
@@ -8,6 +10,7 @@ function App() {
     <body>
     <Navbar/>
     <Hero/>
+    <MidSection/>
     </body>
   );
 }
