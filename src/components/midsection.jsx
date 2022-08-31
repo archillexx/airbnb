@@ -6,9 +6,18 @@ import city5 from "../images/city5.png"
 import city6 from "../images/city6.png"
 import city7 from "../images/city7.png"
 import city8 from "../images/city8.png"
+import { Data } from "../data/data"
+import Cards from "./cards"
 
 
 const MidSection = ()=>{
+    const cards = Data.map((item)=>{
+        return (
+        <Cards
+          id={item.id}
+          item={item} />)
+    
+      })
     return(
         <section className="mid__container">
             <div className="explore__container">
@@ -81,7 +90,16 @@ const MidSection = ()=>{
                     <button>Learn more at Airbnb.org</button>
                 </div>
             </div>
+            <div className="card__container">
+                <h1>Live anywhere</h1>
+                <div className="card__box">
+                    {cards}
+                </div>
+            </div>
+            
         </section>
+    
+        
     )
 }
 
